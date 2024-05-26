@@ -43,7 +43,7 @@ set(CMAKE_C_EXTENSIONS OFF)
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
-option(BUILD_SHARED_LIBS "Build shared libraries." ON)
+option(BUILD_SHARED_LIBS "Build shared libraries." OFF)
 option(SECP256K1_DISABLE_SHARED "Disable shared library. Overrides BUILD_SHARED_LIBS." OFF)
 if(SECP256K1_DISABLE_SHARED)
   set(BUILD_SHARED_LIBS OFF)
@@ -175,9 +175,9 @@ if(SECP256K1_VALGRIND)
   endif()
 endif()
 
-option(SECP256K1_BUILD_BENCHMARK "Build benchmarks." ON)
-option(SECP256K1_BUILD_TESTS "Build tests." ON)
-option(SECP256K1_BUILD_EXHAUSTIVE_TESTS "Build exhaustive tests." ON)
+option(SECP256K1_BUILD_BENCHMARK "Build benchmarks." OFF)
+option(SECP256K1_BUILD_TESTS "Build tests." OFF)
+option(SECP256K1_BUILD_EXHAUSTIVE_TESTS "Build exhaustive tests." OFF)
 option(SECP256K1_BUILD_CTIME_TESTS "Build constant-time tests." ${SECP256K1_VALGRIND})
 option(SECP256K1_BUILD_EXAMPLES "Build examples." OFF)
 
